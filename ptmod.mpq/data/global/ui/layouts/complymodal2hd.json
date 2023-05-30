@@ -1,0 +1,544 @@
+{
+    "type": "UKComplianceModal", "name": "ComplyModal2",
+    "fields": {
+        ///"anchor": { "x": 0.5, "y": 0.5 },
+		"anchor": { "x": 0.3, "y": 0.2 },
+        "isDismissable": true,
+		"acceptsEscKeyEverywhere": true,
+    },
+    "children": [
+        {
+            "type": "NineTileImageWidget", "name": "TooltipTile",
+            "fields": {
+                /// OG "rect": { "x": -775, "y": -350, "width": 1550, "height": 700 },
+				/// works "rect": { "x": -775, "y": -350, "width": 1550, "height": 1000 },
+				"rect": { "x": -775, "y": -350, "width": 1610, "height": 1450 },
+                "filename": "PANEL/TooltipBorder/TooltipBorder",
+                "backgroundColor": [ 0.0, 0.0, 0.0, 0.80 ],
+                "tileScale": 1.0,
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "Title",
+                    "fields": {
+                        "rect": { "x": 0, "y": 0, "width": 1610, "height": 150 },
+                        "style": { //"$StyleModalDialogTitle" with vertical alignment
+                            "fontColor": "$FontColorWhite",
+                            "alignment": { "h": "center", "v": "center" },
+                            "options": { "lineWrap": true, "newlineHandling": "standard" },
+                            "pointSize": "$MediumLargeFontSize",
+                            "spacing": "$ReducedSpacing",
+                        },
+                        "text": "Helpful Links", 
+                    }
+                },
+				{
+                    "type": "ButtonWidget", "name": "Closer",
+                    "fields": {
+						"rect": { "x": 715, "y": 0 },
+				        "anchor": { "x": 0.5, "y": 0.0 },
+                        "tooltipString": "@strClose",
+                        "sound": "cursor_close_window_hd",
+                        "onClickMessage": "PanelManager:ClosePanel:ComplyModal2",
+                        "filename": "PANEL/closebtn_4x",
+					    "acceptsEscKeyEverywhere": true,
+                    }
+                },				
+                {
+                    "type": "TextBoxWidget", "name": "PromptParagraph1",
+                    "fields": {
+                        "rect": { "x": 50, "y": 110, "width": 1610, "height": 110 },
+                        "style": "$StyleModalDialogDescription",
+                        "text": "Launch the sites you need in a web browser. Enjoy!", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link1",
+                    "fields": {
+                        "rect": { "x": 5, "y": 220 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/basics.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Item Basics", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link2",
+                    "fields": {
+                        "rect": { "x": 5, "y": 330 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml#normal",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Normal Items", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link3",
+                    "fields": {
+                        "rect": { "x": 5, "y": 440 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml#exceptional",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Exceptional Items", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link4",
+                    "fields": {
+                        "rect": { "x": 5, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml#elite",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Elite Items", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link5",
+                    "fields": {
+                        "rect": { "x": 5, "y": 660 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/socketeditems.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Socketed Items", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link6",
+                    "fields": {
+                        "rect": { "x": 5, "y": 770 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/gems.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Gems", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link7",
+                    "fields": {
+                        "rect": { "x": 5, "y": 880 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/jewels.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Jewels", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link8",
+                    "fields": {
+                        "rect": { "x": 5, "y": 990 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/runes.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Runes", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link9",
+                    "fields": {
+                        "rect": { "x": 5, "y": 1100 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/runewords.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Rune Words", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link10",
+                    "fields": {
+                        "rect": { "x": 5, "y": 1210 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/magic.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Magic Items", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link11",
+                    "fields": {
+                        "rect": { "x": 5, "y": 1320 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/magic/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Magic Affixes", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link12",
+                    "fields": {
+                        "rect": { "x": 540, "y": 220 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/crafteditems.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Crafted Items", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link13",
+                    "fields": {
+                        "rect": { "x": 540, "y": 330 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/sets/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Set Items", 
+                    }
+                },								
+                {
+                    "type": "ButtonWidget", "name": "Link14",
+                    "fields": {
+                        "rect": { "x": 540, "y": 440 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/uniques.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Unique Items", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link15",
+                    "fields": {
+                        "rect": { "x": 540, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/charms.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Charms", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link16",
+                    "fields": {
+                        "rect": { "x": 540, "y": 660 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/cube.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Horadric Cube", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link17",
+                    "fields": {
+                        "rect": { "x": 540, "y": 770 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Items Index", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link18",
+                    "fields": {
+                        "rect": { "x": 540, "y": 880 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/normal/urings.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Unique Rings", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link19",
+                    "fields": {
+                        "rect": { "x": 540, "y": 990 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/normal/uamulets.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Unique Amulets", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link20",
+                    "fields": {
+                        "rect": { "x": 540, "y": 1100 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/normal/ucharms.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Unique Charms", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link21",
+                    "fields": {
+                        "rect": { "x": 540, "y": 1210 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/normal/ujewels.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Unique Jewels", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link22",
+                    "fields": {
+                        "rect": { "x": 540, "y": 1320 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/items/normal/ucirclets.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Unique Circlets", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link23",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 220 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/classes/amazon.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Amazon Info", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link24",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 330 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/classes/assassin.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Assassin Info", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link25",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 440 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/classes/necromancer.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Necromancer Info", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link26",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/classes/barbarian.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Barbarian Info", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link27",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 660 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/classes/sorceress.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Sorceress Info", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link28",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 770 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/classes/druid.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Druid Info", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link29",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 880 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/classes/paladin.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Paladin Info", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link30",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 990 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/skills/basics.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Skill Basics", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link31",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 1100 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/skills/castingdelays.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Casting Delays", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Link32",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 1210 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/skills/alphaskills.shtml",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "All Skills", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Link33",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 1320 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://classic.battle.net/diablo2exp/skills/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Skill Index", 
+                    }
+                },								
+            ]
+        },	
+        {
+            "type": "RectangleWidget", "name": "MessageLogBackground",
+            "fields": {
+                "fitToParent": true,
+                "color": [ 0.0, 0.0, 0.0, 0.7 ],
+            },
+        },
+        {
+            "type": "ChatListWidget", "name": "ListContainer",
+            "fields": {
+                "rect": { "x": 0, "y": 10, "width": 1200, "height": 770 },
+                "isHoverList": false,
+                "direction": "vertical",
+                "scrollControllerName": "ScrollBar",
+                "chatDataSource": "ChatHistory",
+                "growsBottomUp": true,
+                "itemsContainerSizeMultiplier": 5.0,
+            },
+            "children": [
+                {
+                    "type": "ListItemWidget", "name": "ChatEntryTemplate",
+                    "fields": {
+                        "rect": { "x": 10, "y": 0, "width": 1100, "height": 50 },
+                    },
+                    "children": [
+                        {
+                            "type": "TextBoxWithLinksWidget", "name": "MessageText",
+                            "fields": {
+                                "fitToParent": true,
+                                "text/fontType": "Chat",
+                                "text/style": {
+                                    "alignment": { "h": "left", "v": "center" },
+                                    "options": { "pipeCharacterBehavior" : "handle", "newlineHandling": "standard", "lineWrap": true },
+                                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                                    "fontFace": "BlizzardGlobal",
+                                    "pointSize": "$MediumFontSize",
+                                },
+                            }
+                        },
+                    ]
+                },
+				
+            ]
+        },
+        {
+            "type": "ScrollControllerWidget", "name": "ScrollBar",
+            "fields": {
+                "rect": { "x": 1170, "y": 40, "width": 26, "height": 700 },
+                "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                "barFilepath": "PauseMenu\\VerticalIndicator",
+                "viewName": "ListContainer",
+                "focusOnMouseOver": false,
+                "focusIndicatorVisible": false,
+            }
+        },
+    ]
+}
+
